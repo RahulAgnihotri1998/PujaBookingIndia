@@ -1,0 +1,8 @@
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
