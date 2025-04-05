@@ -2,7 +2,7 @@
 session_start();
 
 // Check if session variables exist
-if(isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
+if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
     // Session variables exist, user is logged in
     $user_id = $_SESSION['user_id'];
     $email = $_SESSION['email'];
@@ -58,19 +58,23 @@ include('inc/header.php') ?>
                 <i class="settings-close ti-close"></i>
                 <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+                        <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
+                            aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+                        <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
+                            aria-controls="chats-section">CHATS</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="setting-content">
-                    <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+                    <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+                        aria-labelledby="todo-section">
                         <div class="add-items d-flex px-3 mb-0">
                             <form class="form w-100">
                                 <div class="form-group d-flex">
                                     <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
-                                    <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                                    <button type="submit" class="add btn btn-primary todo-list-add-btn"
+                                        id="add-task">Add</button>
                                 </div>
                             </form>
                         </div>
@@ -145,11 +149,14 @@ include('inc/header.php') ?>
                     <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
-                            <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+                            <small
+                                class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
+                                All</small>
                         </div>
                         <ul class="chat-list">
                             <li class="list active">
-                                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span
+                                        class="online"></span></div>
                                 <div class="info">
                                     <p>Thomas Douglas</p>
                                     <p>Available</p>
@@ -157,7 +164,8 @@ include('inc/header.php') ?>
                                 <small class="text-muted my-auto">19 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span
+                                        class="offline"></span></div>
                                 <div class="info">
                                     <div class="wrapper d-flex">
                                         <p>Catherine</p>
@@ -168,7 +176,8 @@ include('inc/header.php') ?>
                                 <small class="text-muted my-auto">23 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span
+                                        class="online"></span></div>
                                 <div class="info">
                                     <p>Daniel Russell</p>
                                     <p>Available</p>
@@ -176,7 +185,8 @@ include('inc/header.php') ?>
                                 <small class="text-muted my-auto">14 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span
+                                        class="offline"></span></div>
                                 <div class="info">
                                     <p>James Richardson</p>
                                     <p>Away</p>
@@ -184,7 +194,8 @@ include('inc/header.php') ?>
                                 <small class="text-muted my-auto">2 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span
+                                        class="online"></span></div>
                                 <div class="info">
                                     <p>Madeline Kennedy</p>
                                     <p>Available</p>
@@ -192,7 +203,8 @@ include('inc/header.php') ?>
                                 <small class="text-muted my-auto">5 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span
+                                        class="online"></span></div>
                                 <div class="info">
                                     <p>Sarah Graves</p>
                                     <p>Available</p>
@@ -207,62 +219,70 @@ include('inc/header.php') ?>
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
 
 
 
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Category</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="add-brand.php">Add Puja Category</a></li>
-                <li class="nav-item"> <a class="nav-link" href="manage-brands.php">Manage Puja Category</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="icon-layout menu-icon"></i>
+                            <span class="menu-title">Category</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="add-brand.php">Add Puja Category</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" href="manage-brands.php">Manage Puja
+                                        Category</a></li>
 
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
-              aria-controls="form-elements">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Products</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="add-products.php">Add A Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="manage-products.php">Manage Products</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#blog-elements" aria-expanded="false" aria-controls="blog-elements">
-            <i class="icon-columns menu-icon"></i>
-            <span class="menu-title">Blog</span>
-            <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="blog-elements">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item"><a class="nav-link" href="add-blog-category.php">Add a Category</a></li>
-              <li class="nav-item"><a class="nav-link" href="all-blog-category-list.php"> Manage Category</a></li>
-              <li class="nav-item"><a class="nav-link" href="add-single-blog-post.php"> Add New Post</a></li>
-              <li class="nav-item"><a class="nav-link" href="all-blog-post.php"> Manage Posts</a></li>
-            </ul>
-          </div>
-        </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+                            aria-controls="form-elements">
+                            <i class="icon-columns menu-icon"></i>
+                            <span class="menu-title">Products</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="form-elements">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="add-products.php">Add A Product</a></li>
+                                <li class="nav-item"><a class="nav-link" href="manage-products.php">Manage Products</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#blog-elements" aria-expanded="false"
+                            aria-controls="blog-elements">
+                            <i class="icon-columns menu-icon"></i>
+                            <span class="menu-title">Blog</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="blog-elements">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="add-blog-category.php">Add a Category</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="all-blog-category-list.php"> Manage
+                                        Category</a></li>
+                                <li class="nav-item"><a class="nav-link" href="add-single-blog-post.php"> Add New
+                                        Post</a></li>
+                                <li class="nav-item"><a class="nav-link" href="all-blog-post.php"> Manage Posts</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-        </ul>
-      </nav>
+                </ul>
+            </nav>
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
@@ -276,7 +296,7 @@ include('inc/header.php') ?>
                                         <!-- Add class <code>.table-striped</code> -->
                                     </p>
                                     <style>
-                                        .brandtable{
+                                        .brandtable {
                                             width: 100%;
                                         }
                                     </style>
@@ -285,7 +305,6 @@ include('inc/header.php') ?>
                                         <table class="brandtable table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Image</th>
                                                     <th>Title</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -294,32 +313,51 @@ include('inc/header.php') ?>
                                             <tbody>
                                                 <?php
                                                 include('./codes/db.php');
-                                                // Perform a query to fetch data from your database
-                                                $query = "SELECT id, name, status, logo FROM category ORDER BY id DESC"; 
-                                                $result = $db->query($query);
-                                                if ($result->num_rows > 0) {
-                                                    while ($row = $result->fetch_assoc()) {
-                                                ?>
-                                                        <tr>
-                                                            <td class="py-1">
-                                                                <img src="./codes/<?php echo $row['logo']; ?> " alt="Brand Image"  style="height: 100px;width: 100px;"/>
-                                                            </td>
-                                                            <td><?php echo $row['name']; ?></td>
-                                                            <td>
-                                                                <label class="badge badge-success"><?php echo $row['status']; ?></label>
-                                                            </td>
-                                                            <td>
-                                                                <a href="edit-brand.php?id=<?php echo $row['id']; ?>">
-                                                                    <i style="font-size: 19px; color: #4b49ac;" class="mdi mdi-pencil"></i>
-                                                                </a>
-                                                                <a href="#" class="delete-brand" data-id="<?php echo $row['id']; ?>">
-    <i style="font-size: 19px; color: #FF4747;" class="mdi mdi-delete"></i>
-</a>
-                                                            </td>
-                                                        </tr>
-                                                <?php
+
+                                                try {
+                                                    // Prepare and execute the query (adjust table/column names as needed)
+                                                    $stmt = $db->prepare("SELECT id, name, status FROM category ORDER BY id DESC");
+                                                    $stmt->execute();
+                                                    $result = $stmt->get_result();
+
+                                                    if ($result && $result->num_rows > 0) {
+                                                        while ($row = $result->fetch_assoc()) {
+                                                            ?>
+                                                            <tr>
+                                                                <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                                                <td>
+                                                                    <label
+                                                                        class="badge <?php echo $row['status'] == 'active' ? 'badge-success' : 'badge-warning'; ?>">
+                                                                        <?php echo htmlspecialchars($row['status']); ?>
+                                                                    </label>
+                                                                </td>
+                                                                <td>
+                                                                    <a
+                                                                        href="edit-brand.php?id=<?php echo htmlspecialchars($row['id']); ?>">
+                                                                        <i style="font-size: 19px; color: #4b49ac;"
+                                                                            class="mdi mdi-pencil"></i>
+                                                                    </a>
+                                                                    <a href="#" class="delete-brand"
+                                                                        data-id="<?php echo htmlspecialchars($row['id']); ?>">
+                                                                        <i style="font-size: 19px; color: #FF4747;"
+                                                                            class="mdi mdi-delete"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <?php
+                                                        }
+                                                    } else {
+                                                        echo "<tr><td colspan='3'>No categories found.</td></tr>";
                                                     }
+
+                                                    $stmt->close();
+                                                } catch (mysqli_sql_exception $e) {
+                                                    // Handle SQL errors
+                                                    echo "<tr><td colspan='3'>Error fetching categories: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
                                                 }
+
+                                                // Close the database connection
+                                                $db->close();
                                                 ?>
                                             </tbody>
                                         </table>

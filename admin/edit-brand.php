@@ -300,7 +300,7 @@ include('inc/header.php') ?>
 
 
 
-            <div class="content-wrapper">
+        <div class="content-wrapper">
                 <div class="row">
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
@@ -320,7 +320,7 @@ include('inc/header.php') ?>
                                     $brandId = $_GET['id'];
 
                                     // Prepare and execute the SQL statement to fetch brand data by ID
-                                    $sql = "SELECT * FROM brand WHERE id = '$brandId'";
+                                    $sql = "SELECT * FROM Category WHERE id = '$brandId'";
                                     $result = $db->query($sql);
 
                                     // Check if the query was successful and brand data exists
@@ -353,9 +353,9 @@ include('inc/header.php') ?>
                                         <label for="exampleInputStatus">Status</label>
                                         <select class="form-control" id="exampleInputStatus">
                                             <option value="">Select Status</option>
-                                            <option value="Published" <?php echo isset($brandData['status']) && $brandData['status'] == 'Published' ? 'selected' : ''; ?>>Published</option>
-                                            <option value="Draft" <?php echo isset($brandData['status']) && $brandData['status'] == 'Draft' ? 'selected' : ''; ?>>Draft</option>
-                                            <option value="Archived" <?php echo isset($brandData['status']) && $brandData['status'] == 'Archived' ? 'selected' : ''; ?>>Archived</option>
+                                            <option value="active" <?php echo isset($brandData['status']) && $brandData['status'] == 'active' ? 'selected' : ''; ?>>active</option>
+                                           
+                                            <option value="inactive" <?php echo isset($brandData['status']) && $brandData['status'] == 'inactive' ? 'selected' : ''; ?>>inactive</option>
                                         </select>
                                         <div id="statusError" class="error-message"></div>
                                     </div>
@@ -443,7 +443,6 @@ include('inc/header.php') ?>
 
                 </div>
             </div>
-
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     // Get all close buttons

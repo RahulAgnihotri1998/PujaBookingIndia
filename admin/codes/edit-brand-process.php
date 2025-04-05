@@ -117,30 +117,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare SQL statement for updating brand data
-    $sql = "UPDATE category SET 
-            name = '$title', 
-            url = '$url', 
-            description = '$description', 
-            longDescription = '$longDescription', 
-            status = '$status'";
+    // Prepare SQL statement for updating category data
+echo $sql = "UPDATE category SET 
+name = '$title', 
+url = '$url', 
+description = '$description', 
+longDescription = '$longDescription', 
+status = '$status'";
 
-    // Add logo to the query if a new logo file is uploaded
-    if (!empty($logoPath)) {
-        $sql .= ", logo = '$logoPath'";
-    }
+// Add logo to the query if a new logo file is uploaded
+if (!empty($logoPath)) {
+$sql .= ", logo = '$logoPath'";
+}
 
-    // Add featured image to the query if a new featured image file is uploaded
-    if (!empty($featuredImagePath)) {
-        $sql .= ", featuredImage = '$featuredImagePath'";
-    }
+// Add featured image to the query if a new featured image file is uploaded
+if (!empty($featuredImagePath)) {
+$sql .= ", featuredImage = '$featuredImagePath'";
+}
 
-    // Add description image to the query if a new description image file is uploaded
-    if (!empty($descriptionImagePath)) {
-        $sql .= ", descriptionImage = '$descriptionImagePath'";
-    }
+// Add description image to the query if a new description image file is uploaded
+if (!empty($descriptionImagePath)) {
+$sql .= ", descriptionImage = '$descriptionImagePath'";
+}
 
-    // Append WHERE clause to specify the brand being updated
-    $sql .= " WHERE id = $brand_id";
+// Append WHERE clause to specify the category being updated
+$sql .= " WHERE id = $brand_id";
+
 
     // Execute the update query
     if ($db->query($sql) === TRUE) {
