@@ -60,7 +60,8 @@
 
                     if ($product_result->num_rows > 0) {
                         while ($product = $product_result->fetch_assoc()) {
-                            $services = json_decode($product['services'], true);
+                            $servicesJson = $product['services'] ?? '[]'; // make sure it’s defined
+    $services = json_decode($servicesJson ?: '[]', true); // handle null or empty string
                             $created_at = new DateTime($product['created_at']);
                             ?>
                             <div class="col-lg-4 col-md-6">

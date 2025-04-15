@@ -8,7 +8,7 @@ if(isset($_GET['id'])) {
     $brandId = $_GET['id'];
 
     // Prepare and execute the SQL statement to delete the brand from the database
-    $sql = "DELETE FROM brand WHERE id = '$brandId'";
+    $sql = "DELETE FROM category WHERE id = '$brandId'";
     if ($db->query($sql) === TRUE) {
         // If deletion is successful, redirect the user to the manage-brands page
         header('Location: manage-brands.php');

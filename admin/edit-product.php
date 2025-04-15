@@ -521,9 +521,9 @@ if ($result->num_rows > 0) {
 <!-- Select Brand -->
 <!-- Error div for Select Brand -->
 <div class="form-group">
-    <label for="brandSelect">Select Brand</label>
+    <label for="brandSelect">Select category</label>
     <select class="form-control form-control-lg" id="brandSelect" name="brand_id">
-        <option value="">Select Brand</option>
+        <option value="">Select category</option>
         <?php
         // Assuming $brands is an array containing brand data fetched from the database
         foreach ($brands as $brand) {
@@ -694,14 +694,16 @@ if ($result->num_rows > 0) {
 
                                         <!-- Status -->
                                         <!-- Error div for Status -->
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect2">Status</label>
-                                            <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-                                                <option>Unpublished</option>
-                                                <option>Published</option>
-                                            </select>
-                                            <div id="statusError" class="error-message"></div> <!-- Error div -->
-                                        </div>
+                                    <!-- Status -->
+<div class="form-group">
+    <label for="statusSelect">Status</label>
+    <select class="form-control form-control-lg" id="statusSelect" name="status">
+        <option value="inactive" <?php echo ($status === 'inactive') ? 'selected' : ''; ?>>Inactive</option>
+        <option value="active" <?php echo ($status === 'active') ? 'selected' : ''; ?>>Active</option>
+    </select>
+    <div id="statusError" class="error-message"></div>
+</div>
+
                                     </div>
                                 </div>
                             </div>
@@ -930,7 +932,8 @@ if ($result->num_rows > 0) {
                         }
                     }
                     formData.append('brandId', document.getElementById('brandSelect').value);
-                    formData.append('status', document.getElementById('exampleFormControlSelect2').value);
+                    formData.append('status', document.getElementById('statusSelect').value);
+
                     formData.append('longDescription', CKEDITOR.instances['editor1'].getData());
                     formData.append('applications', CKEDITOR.instances['editor2'].getData());
                     // Event listener for the checkboxes to update selected values

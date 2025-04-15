@@ -330,7 +330,7 @@ include('inc/header.php') ?>
                 <?php
                 include('./codes/db.php');
                 // Fetch brand data from the database
-                $sql = "SELECT id, name FROM brand WHERE status = 'Published'";
+                $sql = "SELECT id, name FROM category WHERE status = 'active'";
 
                 $result = $db->query($sql);
 
@@ -348,9 +348,9 @@ include('inc/header.php') ?>
                 <!-- Select Brand -->
                 <!-- Error div for Select Brand -->
                 <div class="form-group">
-                  <label for="brandSelect">Select Brand</label>
+                  <label for="brandSelect">Select puja category</label>
                   <select class="form-control form-control-lg" id="brandSelect" name="brand_id">
-                    <option value="">Select Brand</option>
+                    <option value="">Select puja category</option>
                     <?php
                     // Assuming $brands is an array containing brand data fetched from the database
                     foreach ($brands as $brand) {
@@ -445,8 +445,8 @@ include('inc/header.php') ?>
                 <div class="form-group">
                   <label for="exampleFormControlSelect2">Status</label>
                   <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-                    <option>Unpublished</option>
-                    <option>Published</option>
+                    <option>active</option>
+                    <option>inactive</option>
                   </select>
                   <div id="statusError" class="error-message"></div> <!-- Error div -->
                 </div>

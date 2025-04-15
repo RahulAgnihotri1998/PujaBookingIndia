@@ -345,13 +345,15 @@
                                     class="tab-pane fade <?php echo $first_tab ? 'show active' : ''; ?>"
                                     id="<?php echo $tab_id; ?>" role="tabpanel" tabindex="0">
                                     <div class="row">
-                                        <?php
-                                        // Fetch products for this brand
-                                        $product_query = "SELECT * FROM products WHERE brand = " . $brand['id'] . " AND status = 'active'";
-                                        $product_result = mysqli_query($db, $product_query);
-                                        while ($product = mysqli_fetch_assoc($product_result)) {
-                                            $services = json_decode($product['services'], true);
-                                            ?>
+                                    <?php
+// Fetch products for this brand
+$product_query = "SELECT * FROM products WHERE brand = " . $brand['id'] . " AND status = 'active'";
+$product_result = mysqli_query($db, $product_query);
+while ($product = mysqli_fetch_assoc($product_result)) {
+    $servicesJson = $product['services'] ?? '[]'; // make sure it’s defined
+    $services = json_decode($servicesJson ?: '[]', true); // handle null or empty string
+?>
+
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="property-single-boxarea">
                                                     <div class="img1 image-anime">
